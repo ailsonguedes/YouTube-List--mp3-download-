@@ -20,15 +20,12 @@ def convert_to_mp3(video_url):
 
     print("Download e conversão concluídos!")
 
-#video_url = input("Insira a URL do vídeo do YouTube: ")
-#convert_to_mp3(video_url)
 df = pd.read_excel('list.xlsx')
 
 # Acesse a primeira coluna do DataFrame
 lista = df.iloc[:, 0]
 
 for item in lista:
-    print(item)
     video_url = (item)
     convert_to_mp3(video_url)
     sleep(2)
